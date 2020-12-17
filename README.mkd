@@ -28,13 +28,13 @@
 
 **Query Params**
 
-**KEY**                                   **VALUE**
+**KEY**        --                           **VALUE**
 
-name								 chosenName
+name					--			 chosenName
 
-password						 chosenPassword
+password			--			 chosenPassword
 
-role									chosenRole
+role					--				chosenRole
 
 **Delete** All Users :
 
@@ -54,13 +54,13 @@ role									chosenRole
 
 **Query Params**
 
-**KEY**                                   **VALUE**
+**KEY**            --                       **VALUE**
 
-newName								 chosenName
+newName					--			 chosenName
 
-newPassword						 chosenPassword
+newPassword			--			 chosenPassword
 
-newRole									chosenRole
+newRole					--				chosenRole
 
 **Delete** one User :
 
@@ -95,11 +95,11 @@ newRole									chosenRole
 
 **Query Params**
 
-**KEY**                                   **VALUE**
+**KEY**            --                       **VALUE**
 
-name								chosenName
+name				--				chosenName
 
-price								 chosenPrice
+price				--				 chosenPrice
 
 **Get** one Product :
 
@@ -119,11 +119,11 @@ price								 chosenPrice
 
 **Query Params**
 
-**KEY**                                   **VALUE**
+**KEY**          --                         **VALUE**
 
-newName					    chosenName
+newName			--		    chosenName
 
-newPrice						  chosenPrice
+newPrice			--			  chosenPrice
 
 ## Basket
 
@@ -154,9 +154,9 @@ newPrice						  chosenPrice
 
 **Query Params **
 
-**KEY**                                   **VALUE**
+**KEY**         --                          **VALUE**
 
-productIdArray 			 firstChosenID, secondChosenID,....
+productIdArray 		--	 firstChosenID, secondChosenID,....
 
 **Get** one Basket Product :
 
@@ -176,11 +176,11 @@ productIdArray 			 firstChosenID, secondChosenID,....
 
 **Query Params**
 
-**KEY**                                   **VALUE**
+**KEY**           --                        **VALUE**
 
-newName					   chosenName
+newName			--		   chosenName
 
-newPrice						 chosenPrice
+newPrice			--			 chosenPrice
 
 **Delete** one Product :
 
