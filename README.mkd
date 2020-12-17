@@ -30,11 +30,11 @@
 
 **KEY**        --                           **VALUE**
 
-name					--			 chosenName
+- name					--			 chosenName
 
-password			--			 chosenPassword
+- password			--			 chosenPassword
 
-role					--				chosenRole
+- role					--				chosenRole
 
 **Delete** All Users :
 
@@ -56,11 +56,11 @@ role					--				chosenRole
 
 **KEY**            --                       **VALUE**
 
-newName					--			 chosenName
+- newName					--			 chosenName
 
-newPassword			--			 chosenPassword
+- newPassword			--			 chosenPassword
 
-newRole					--				chosenRole
+- newRole					--				chosenRole
 
 **Delete** one User :
 
@@ -97,9 +97,9 @@ newRole					--				chosenRole
 
 **KEY**            --                       **VALUE**
 
-name				--				chosenName
+- name				--				chosenName
 
-price				--				 chosenPrice
+- price				--				 chosenPrice
 
 **Get** one Product :
 
@@ -121,9 +121,9 @@ price				--				 chosenPrice
 
 **KEY**          --                         **VALUE**
 
-newName			--		    chosenName
+- newName			--		    chosenName
 
-newPrice			--			  chosenPrice
+- newPrice			--			  chosenPrice
 
 ## Basket
 
@@ -178,9 +178,9 @@ productIdArray 		--	 firstChosenID, secondChosenID,....
 
 **KEY**           --                        **VALUE**
 
-newName			--		   chosenName
+- newName			--		   chosenName
 
-newPrice			--			 chosenPrice
+- newPrice			--			 chosenPrice
 
 **Delete** one Product :
 
