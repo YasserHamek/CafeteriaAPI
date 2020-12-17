@@ -1,5 +1,7 @@
 # Online Cafeteria RESTfulAPI
 
+The API is deployed with heroku and described with swagger at this link : https://online-cafeteria.herokuapp.com/swagger-ui.html
+
 - `Run AS -> Java Application` the class `app/Application.java` on Eclipse.
 
 ## User
