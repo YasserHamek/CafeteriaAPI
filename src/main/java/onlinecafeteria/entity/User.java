@@ -11,14 +11,8 @@ import javax.persistence.OneToOne;
 @Entity
 public class User {
 
-	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
     private long userId;
-	
-	@OneToOne(cascade=CascadeType.ALL)
-	@JoinColumn(name="basketId")
     private Basket userBasket;
-	
 	private String userName;
     private String userPassword;
 	private String userRole;
@@ -35,8 +29,14 @@ public class User {
      	userBasket.setUser(this);
 	}
 	
+	@OneToOne(cascade=CascadeType.ALL)
+	@JoinColumn(name="basketId")
 	public Basket getUserBasket() {
 		return userBasket;
+	}
+	
+	public void setUserBasket(Basket userBasket) {
+		this.userBasket = userBasket;
 	}
 	
 	public String getUserName() {
@@ -47,12 +47,22 @@ public class User {
 		this.userName = userName;
 	}
 	
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	public long getUserId() {
 		return this.userId;
 	}
 	
+	public void setUserId(long userId) {
+		this.userId = userId;
+	}
+	
 	public String getUserRole() {
 		return this.userRole;
+	}
+	
+	public void setUserRole(String userRole) {
+		this.userRole = userRole;
 	}
 
 	public void setUserRole(long newUserRole) {

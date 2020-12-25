@@ -26,7 +26,7 @@ public class BasketServicesImpl implements BasketServices {
 
 	@Override
 	public Map<Long, Product> getBasketProducts(long userId) {
-		return Collections.unmodifiableMap(getBasket(userId).getBasketProduct());
+		return Collections.unmodifiableMap(getBasket(userId).getProducts());
 	}
 	
 	@Override

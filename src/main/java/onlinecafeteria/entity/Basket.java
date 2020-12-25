@@ -15,22 +15,16 @@ import org.springframework.stereotype.Component;
 @Entity
 public class Basket {
 	
-	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private long basketId;
-	
 	private double totalPrice;
-	
-	@OneToMany(mappedBy="basket", cascade= {CascadeType.PERSIST,CascadeType.MERGE,CascadeType.REFRESH,CascadeType.DETACH})
 	private Map<Long,Product> products;
-	
-	@OneToOne(mappedBy="userBasket",cascade= {CascadeType.PERSIST,CascadeType.MERGE,CascadeType.REFRESH,CascadeType.DETACH})
 	private User user;
 	
 	public Basket() {
 		products = new HashMap<Long, Product>();
 	}
 	
+	@OneToOne(mappedBy="userBasket",cascade= {CascadeType.PERSIST,CascadeType.MERGE,CascadeType.REFRESH,CascadeType.DETACH})
 	public User getUser() {
 		return user;
 	}
@@ -38,19 +32,34 @@ public class Basket {
 	public void setUser(User user) {
 		this.user = user;
 	}
-
+	
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	public long getBasketId() {
 		return basketId;
 	}
 	
-	public double getPrice() {
-		return totalPrice;
+	public void setBasketId(long basketId) {
+		this.basketId = basketId;
 	}
-
-	public Map<Long, Product> getBasketProduct() {	
+	
+	@OneToMany(mappedBy="basket", cascade= {CascadeType.PERSIST,CascadeType.MERGE,CascadeType.REFRESH,CascadeType.DETACH})
+	public Map<Long, Product> getProducts() {	
 		return Collections.unmodifiableMap(products);
 	}
 	
+	public void setProducts(Map<Long, Product> products) {
+		this.products = products;
+	}
+	
+	public double getTotalPrice() {
+		return totalPrice;
+	}
+
+	public void setTotalPrice(double totalPrice) {
+		this.totalPrice = totalPrice;
+	}
+
 	public Product addProduct(Product product) {
 		products.put(product.getProductId(),product);
 		totalPrice = totalPrice + product.getPrice();

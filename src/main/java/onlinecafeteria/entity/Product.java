@@ -10,18 +10,12 @@ import javax.persistence.ManyToOne;
 
 @Entity
 public class Product {
-
-	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	
 	private long productId;
 	private String productName;
 	private double price;
-	
-	@ManyToOne(cascade= {CascadeType.PERSIST,CascadeType.MERGE,CascadeType.REFRESH,CascadeType.DETACH})
-	@JoinColumn(name="basketId")
 	private Basket basket;
 	
-
 	public Product() {
 	}
 
@@ -29,19 +23,35 @@ public class Product {
 		this.productName=productName;
 		this.price=price;
 	}
-	
+
 	public String getProductName() {
 		return productName;
 	}
+	
+	public void setProductName(String productName) {
+		this.productName = productName;
+	}
 
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	public long getProductId() {
 		return productId;
 	}
 
+	public void setProductId(long productId) {
+		this.productId = productId;
+	}
+	
 	public double getPrice() {
 		return price;
 	}
 	
+	public void setPrice(double price) {
+		this.price = price;
+	}
+	
+	@ManyToOne(cascade= {CascadeType.PERSIST,CascadeType.MERGE,CascadeType.REFRESH,CascadeType.DETACH})
+	@JoinColumn(name="basketId")
 	public Basket getBasket() {
 		return basket;
 	}
