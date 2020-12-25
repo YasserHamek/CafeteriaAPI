@@ -1,5 +1,7 @@
 package onlinecafeteria.entity;
 
+import java.io.Serializable;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,9 +11,10 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 
 @Entity
-public class User {
+public class User implements Serializable {
 
-    private long userId;
+	private static final long serialVersionUID = 4158935509385180918L;
+	private long userId;
     private Basket userBasket;
 	private String userName;
     private String userPassword;

@@ -1,4 +1,5 @@
 package onlinecafeteria.entity;
+import java.io.Serializable;
 import java.util.*;
 import java.util.Map.Entry;
 
@@ -13,8 +14,9 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Entity
-public class Basket {
+public class Basket implements Serializable {
 	
+	private static final long serialVersionUID = 7569605771610286946L;
 	private long basketId;
 	private double totalPrice;
 	private Map<Long,Product> products;
